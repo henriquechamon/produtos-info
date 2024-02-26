@@ -1,0 +1,47 @@
+.grid {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.headertext {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: lighter;
+}
+.input {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    color: rgb(0, 100, 200);
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    padding: 0.3rem;
+    border: 0.2px solid #ccc;
+}
+
+.button {
+    background-color: rgb(0, 100, 200);
+    border: 0.2px solid #ccc;
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    border-radius: 1rem;
+}
+.button:hover {
+    border: 0.2px solid #fff;
+    color: #ccc;
+}
+.h3text {
+    font-size: 30px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.input:hover {
+    border: 1px solid rgb(0, 100, 200);
+}
+.card {
+    padding: 3rem;
+    border-radius: 6px;
+    border: 1px solid rgb(0, 100, 255);
+    text-align: center;
+    width: 30%;
+    margin: 10rem auto;
+}

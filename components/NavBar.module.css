@@ -1,0 +1,37 @@
+.navbar {
+    background-color: rgb(0, 100, 200);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    display: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 10;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.navLinks {
+    list-style-type: none;
+    display: flex;
+}
+
+.navLinks li {
+    margin-right: 20px;
+}
+
+.navLinks li:last-child {
+    margin-right: 0;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navLinks a:hover {
+    text-decoration: underline;
+}

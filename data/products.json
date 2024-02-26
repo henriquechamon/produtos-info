@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nome": "iPhone 15 Pro",
+    "preco": 5999.99,
+    "descricao": "Um smartphone muito bom",
+    "image": "iphone.png"
+  },
+  {
+    "id": 2,
+    "nome": "Smart TV 4K Full HD 80'",
+    "preco": 7819.99,
+    "descricao": "Smart TV com frete gratís para todo brasil.",
+    "image": "smart.webp"
+  }
+]
