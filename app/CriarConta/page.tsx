@@ -1,7 +1,9 @@
 import NavBar from "@/components/NavBar";
 import style from "./conta.module.css";
 import { PrismaClient } from "@prisma/client";
-import Swal from "sweetalert2";
+import "../session/Session";
+import { createSession } from "../session/Session";
+import { redirect } from "next/navigation";
 function getRandomInt(max: number) {
   return Math.floor(Math.random() * max);
 }
@@ -10,6 +12,7 @@ export default async function CriarConta() {
     "use server";
     const email = data.get("email");
     const senha = data.get("Senha");
+    createSession(email);
     const client = new PrismaClient();
     const Accounts = await client.account.create({
       data: {
@@ -20,6 +23,7 @@ export default async function CriarConta() {
         name: email,
       },
     });
+    redirect("/Dashboard");
   }
   return (
     <>
