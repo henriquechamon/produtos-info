@@ -6,9 +6,9 @@ function isUserLoggedIn() {
   return fs.existsSync(SESSION_FILE_PATH);
 }
 
-function createSession(email: string) {
+function createSession(email: string, id: number) {
   try {
-    const sessionData = { session: { email } };
+    const sessionData = { email, id };
     fs.writeFileSync(SESSION_FILE_PATH, JSON.stringify(sessionData));
     console.log("Sessão criada com sucesso:", sessionData);
   } catch (error) {

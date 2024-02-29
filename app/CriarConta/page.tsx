@@ -12,17 +12,18 @@ export default async function CriarConta() {
     "use server";
     const email = data.get("email");
     const senha = data.get("Senha");
-    createSession(email);
+    const id = getRandomInt(9999);
     const client = new PrismaClient();
     const Accounts = await client.account.create({
       data: {
         email: email,
         senha: senha,
-        id: getRandomInt(9999),
+        id: id,
         balance: 10000.0,
         name: email,
       },
     });
+    createSession(email, id);
     redirect("/Dashboard");
   }
   return (

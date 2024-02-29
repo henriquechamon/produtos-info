@@ -1,7 +1,7 @@
 import NavBar from "@/components/NavBar";
 import { getSessionData } from "../session/Session";
 import { PrismaClient } from "@prisma/client";
-
+import style from "./dashboard.module.css";
 export default async function Dashboard() {
   const sessionData = getSessionData();
   const client = new PrismaClient();
@@ -9,7 +9,8 @@ export default async function Dashboard() {
   try {
     const account = await client.account.findUnique({
       where: {
-        email: sessionData?.session.email,
+        email: sessionData?.email,
+        id: sessionData?.id,
       },
     });
 
@@ -25,7 +26,8 @@ export default async function Dashboard() {
     return (
       <>
         <NavBar title="Painel do usuário"></NavBar>
-        <h1>Olá {account.name}</h1>{" "}
+        <h1 className={style.headertext}>Olá, {account.name}!</h1>{" "}
+        <h1>Saldo de ${account.balance} </h1>
       </>
     );
   } catch (error) {
