@@ -27,7 +27,9 @@ export default async function Dashboard() {
       <>
         <NavBar title="Painel do usuário"></NavBar>
         <h1 className={style.headertext}>Olá, {account.name}!</h1>{" "}
-        <h1>Saldo de ${account.balance} </h1>
+        <div className={style.card}>
+          <h1 className={style.h1}>Informaçoes importantes</h1>
+        </div>
       </>
     );
   } catch (error) {
